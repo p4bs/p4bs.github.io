@@ -44,6 +44,8 @@ body.yellow {
 .info-link {
     position: absolute;
     font-family: Gotham-Book;
+    font-size: 17px;
+    word-spacing: -3px;
     right: 10px;
     top: 10px;
 }
@@ -105,7 +107,7 @@ body.yellow {
 }
 
 .main .action-buttons {
-    margin: 40px auto 30px;
+    margin: 40px auto 15px;
     display: table;
 }
 
@@ -132,8 +134,6 @@ body.yellow {
 }
 
 .main .action-buttons .button .text{
-    /*position: relative;*/
-    /*top: 25px;*/
     line-height: 60px;
 }
 
@@ -143,4 +143,10 @@ body.yellow {
 
 .main .social-buttons {
     display: none;
+    font-size: 30px;
+    margin: 0px auto;
+}
+
+.main .social-buttons i {
+    padding: 0 5px;
 }
