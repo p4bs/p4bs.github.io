@@ -82,7 +82,8 @@ body.yellow {
 }
 
 .main .header {
-    padding-top: 50px;
+    padding-top: 20px;
+    height: 150px;
 }
 
 .main .header h1 {
@@ -95,6 +96,7 @@ body.yellow {
 
 .main .description {
     font-family: Gotham-Book;
+    height: 300px;
 }
 
 .main .action-buttons {
