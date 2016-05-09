@@ -75,11 +75,13 @@
                 </div>
             </div>
             <div class="description">
-                Here’s the thing: We at Business Sweden help Swedish startups expand their business abroad. Which is great, because the world needs more swedishness. So we !gured, since we’re bringing our Swedish startups to you, we want to help you prepare – by teaching you some swedish. So you can start to vabba, orka, take påtår, dygna, tappa sugen, be fulsnygga and get dåndimpen. Just like the swedes.
-                <br><br>
-                Great swedishness is coming your way.
-                <br>
-                This dictionary will help you prepare.
+                <span>
+                    Here’s the thing: We at Business Sweden help Swedish startups expand their business abroad. Which is great, because the world needs more swedishness. So we !gured, since we’re bringing our Swedish startups to you, we want to help you prepare – by teaching you some swedish. So you can start to vabba, orka, take påtår, dygna, tappa sugen, be fulsnygga and get dåndimpen. Just like the swedes.
+                    <br><br>
+                    Great swedishness is coming your way.
+                    <br>
+                    This dictionary will help you prepare.
+                </span>
             </div>
             <div class="action-buttons yellow">
                 <div class="button" id="email-button">
@@ -161,7 +163,7 @@
                     // Fill with new text
                     $('.swedish-word h1').text("#"+current_word['id']+" "+current_word['word']);
                     $('.subtext h2').text("["+current_word['phonetic']+"]").css("font-style", "normal");;
-                    $('.description').empty();
+                    $('.description span').empty();
                     $('#action-button span').text("Translate me");
 
                     // Translate when clicked
@@ -172,7 +174,7 @@
                 function showTranslation() {
                     $('.swedish-word h1').text(current_word["word"]);
                     $('.subtext h2').text(current_word["meaning"]).css("font-style", "italic");
-                    $('.description').text(current_word["explanation"]);
+                    $('.description span').text(current_word["explanation"]);
                     $('#action-button span').text("Another one");
                     $('#action-button').data("action", "next");
 
@@ -188,6 +190,7 @@
                 $('#action-button').click(function() {
                     var action = $('#action-button').data("action");
                     if(action ==="start") {
+                        $('.description span').addClass('not-intro');
                         displayNewWord();
                     } else if(action ==="translate") {
                         switchColors();
@@ -199,13 +202,14 @@
                         displayNewWord();
                     } else if(action ==="restart") {
                         console.log("wish to restart");
+                        // $('.description span').removeClass('.not-intro');
                     }
                 })
 
                 function displayFinalPage() {
                     $('.swedish-word h1').text("Grattis!");
                     $('.subtext h2').text("[graw-tees]");
-                    $('.description').text("Or as you would say: congratulations! You are now one step closer to achieve true swedishness. And hopefully ready to work with our Swedish startups. Great! Because that was all the swedish words we have for now. But if you have another one, give us a call or click the button below. Hej då! [hei-doe]");
+                    $('.description span').text("Or as you would say: congratulations! You are now one step closer to achieve true swedishness. And hopefully ready to work with our Swedish startups. Great! Because that was all the swedish words we have for now. But if you have another one, give us a call or click the button below. Hej då! [hei-doe]");
 
                     $('#action-button span').text("Start over!");
                     $('#action-button').data("action", "restart");

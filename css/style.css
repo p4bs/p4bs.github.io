@@ -96,7 +96,12 @@ body.yellow {
 
 .main .description {
     font-family: Gotham-Book;
-    height: 300px;
+    height: 280px;
+}
+
+.main .description span.not-intro {
+    position: relative;
+    top: 50px;
 }
 
 .main .action-buttons {
