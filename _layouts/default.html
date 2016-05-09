@@ -201,11 +201,18 @@
                         $('.social-buttons').hide();
                         displayNewWord();
                     } else if(action ==="restart") {
-                        console.log("wish to restart");
-                        // $('.description span').removeClass('.not-intro');
+                        restart();
+
                     }
                 })
 
+                function restart() {
+                    $('.description span').removeClass('.not-intro');
+                    word_data = JSON.parse(document.getElementById('words').innerHTML);
+                    $('#email-button').hide();
+                    $('.social-buttons').hide();
+                    displayNewWord();
+                }
                 function displayFinalPage() {
                     $('.swedish-word h1').text("Grattis!");
                     $('.subtext h2').text("[graw-tees]");
@@ -221,4 +228,5 @@
 
         </script>
     </body>
+    <!-- Developed by Pärham FH - parham@fazelzadeh.se -->
 </html>
