@@ -106,15 +106,16 @@
                 var current_word = null;
 
                 function showInfo(){
-                    $('.info-link').text("- info");
+                    $('.info-link').text("- info").addClass("info-link-in-box");
                     $('.info-box').animate({
                         marginTop: "0px"
                     }, 500)
                     info_showing = true;
+
                 }
 
                 function hideInfo(){
-                    $('.info-link').text("+ info");
+                    $('.info-link').text("+ info").removeClass("info-link-in-box");
                     $('.info-box').animate({
                         marginTop: "-700px"
                     }, 500)

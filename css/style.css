@@ -48,6 +48,10 @@ body.yellow {
     top: 10px;
 }
 
+.info-link-in-box {
+    color: 0B5BFC;
+}
+
 .info-link:hover {
     color: white;
     transition: color 0.25s;
@@ -60,8 +64,8 @@ body.yellow {
     padding-bottom: 50px;
     height: 500px;
     margin-top: -700px;
-    background-color: 0B5BFC;
-    color: FEDF0B;
+    background-color: FEDF0B;
+    color: 0B5BFC;
 }
 
 .info-box .text {
