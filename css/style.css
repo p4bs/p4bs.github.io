@@ -1,5 +1,20 @@
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/Gotham/Gotham-Black.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Gotham';
+  src: url('fonts/Gotham/Gotham-BlackIta.otf') format('opentype');
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Gotham-Book';
+  src: url('fonts/Gotham/Gotham-Book.otf') format('opentype');
+}
+
 body {
     font-family: Gotham;
+    font-weight: normal;
     font-size: 22px;
     margin: 0;
 }
@@ -23,12 +38,12 @@ body.yellow {
 }
 
 .business-logo img{
-    width: 120px;
+    width: 170px;
 }
 
 .info-link {
     position: absolute;
-
+    font-family: Gotham-Book;
     right: 10px;
     top: 10px;
 }
@@ -42,6 +57,7 @@ body.yellow {
 .info-box {
     text-align: center;
     padding-top: 50px;
+    padding-bottom: 50px;
     height: 500px;
     margin-top: -700px;
     background-color: 0B5BFC;
@@ -51,11 +67,12 @@ body.yellow {
 .info-box .text {
     width: 500px;
     margin: 0 auto;
+    font-family: Gotham-Book;
 }
 
 .main {
     margin: 0 auto;
-    padding-top: 180px;
+    padding-top: 130px;
     width: 600px;
     text-align: center;
 }
@@ -70,6 +87,10 @@ body.yellow {
 
 .main .header h2{
     margin-top: 5px;
+}
+
+.main .description {
+    font-family: Gotham-Book;
 }
 
 .main .action-buttons {

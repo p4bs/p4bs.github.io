@@ -65,7 +65,7 @@
             <div class="header">
                 <div class="swedish-word">
                     <h1>
-                        Hello world. (dev.)
+                        Hello world.
                     </h1>
                 </div>
                 <!-- Either or -->
@@ -159,7 +159,7 @@
                     }
                     // Fill with new text
                     $('.swedish-word h1').text("#"+current_word['id']+" "+current_word['word']);
-                    $('.subtext h2').text("["+current_word['phonetic']+"]");
+                    $('.subtext h2').text("["+current_word['phonetic']+"]").css("font-style", "normal");;
                     $('.description').empty();
                     $('#action-button span').text("Translate me");
 
@@ -170,7 +170,7 @@
 
                 function showTranslation() {
                     $('.swedish-word h1').text(current_word["word"]);
-                    $('.subtext h2').text(current_word["meaning"]);
+                    $('.subtext h2').text(current_word["meaning"]).css("font-style", "italic");
                     $('.description').text(current_word["explanation"]);
                     $('#action-button span').text("Another one");
                     $('#action-button').data("action", "next");
