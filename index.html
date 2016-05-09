@@ -1,0 +1,219 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+
+        <script type="application/json" id="words">
+            [
+                {
+                    "id": 1,
+                    "word": "Hinna",
+                    "phonetic": "hee-nah",
+                    "meaning": "To make it in time",
+                    "explanation": "When you struggle to make it on time, why use five words when you can use one? That’s Swedish efficiency right there. Maybe that’s part of the explanation why our companies are so successful? Because using the word hinna, makes it easier to hinna. Great word. Use it."
+                },
+                {
+                  "id": 2,
+                  "word": "Dygna",
+                  "phonetic": "dyng-nah",
+                  "meaning": "Staying awake for 24 hours",
+                  "explanation": "You all know what we’re talking about. Sometimes you just have to dygna. Like when you’re a highly advanced procrastinator, and that deadline hits you right in the face. Like this: “Wow, you look tired, the bags under your eyes are huge” “Yes, I had to dygna because I couldn’t get that damn code to work”. We all have to dygna sometimes, so why not have a word for it? Let’s just use dygna from now on."
+                },
+                {
+                  "id": 3,
+                  "word": "Påtår",
+                  "phonetic": "poe-t-oer",
+                  "meaning": "On toes",
+                  "explanation": "A very Swedish word, closely related to the fika. It basically means refill. But beware! It’s only applicable to coffee, but still very useful. Because if you work hard (like a swede) you need that constant flow of coffee. You need påtår. Especially if you decide to dygna. So come on world, let’s start using Påtår."
+                }
+            ]
+        </script>
+    </head>
+    <body class="blue">
+        <div class="business-logo">
+            <img src="reference/BusSwe_Logo-TL_White.png">
+        </div>
+        <div class="desktop-hand">
+
+        </div>
+        <div class="info-link">
+            + info
+        </div>
+        <div class="info-box">
+            <div class="header">
+                <h1>
+                    Who Are We?
+                </h1>
+            </div>
+            <div class="text">
+            This is an initiative by Business Sweden. And who are we? Half-government, half-business. Suits? Yes. But
+
+            the only thing you really need to know about us is that we help Swedish startups expand their business
+
+            abroad. Making sure they reach their full international potential. How? Counseling, information, education,
+
+            tailored services, establishment and providing contacts in 57 different countries.
+            <br><br>
+            Are you a Swedish startup interested in the world? Contact us.
+            <br>
+            Are you the world and interested in Swedish startups? Contact us.
+            </div>
+        </div>
+        <div class="main">
+            <div class="header">
+                <div class="swedish-word">
+                    <h1>
+                        Hello world.
+                    </h1>
+                </div>
+                <!-- Either or -->
+                <div class="subtext">
+                    <h2>
+                    </h2>
+                </div>
+            </div>
+            <div class="description">
+                Here’s the thing: We at Business Sweden help Swedish startups expand their business abroad. Which is great, because the world needs more swedishness. So we !gured, since we’re bringing our Swedish startups to you, we want to help you prepare – by teaching you some swedish. So you can start to vabba, orka, take påtår, dygna, tappa sugen, be fulsnygga and get dåndimpen. Just like the swedes.
+                <br><br>
+                Great swedishness is coming your way.
+                <br>
+                This dictionary will help you prepare.
+            </div>
+            <div class="action-buttons yellow">
+                <div class="button" id="email-button">
+                    <span class="text">
+                        I have a word!
+                    </span>
+                </div>
+                <div class="button" id="action-button" data-action="start">
+                    <span class="text">
+                        Start!
+                    </span>
+                </div>
+            </div>
+            <div class="social-buttons">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </div>
+        </div>
+        <script>
+            $( document ).ready(function(){
+                var info_showing = false;
+                var is_blue = true;
+                var word_data = JSON.parse(document.getElementById('words').innerHTML);
+                var current_word = null;
+
+                function showInfo(){
+                    $('.info-link').text("- info");
+                    $('.info-box').animate({
+                        marginTop: "0px"
+                    }, 500)
+                    info_showing = true;
+                }
+
+                function hideInfo(){
+                    $('.info-link').text("+ info");
+                    $('.info-box').animate({
+                        marginTop: "-700px"
+                    }, 500)
+                    info_showing = false;
+                }
+
+                function switchColors(){
+                    if(is_blue){
+                        var primary = "yellow";
+                        var secondary = "blue";
+                        is_blue = false;
+                    } else {
+                        var primary = "blue";
+                        var secondary = "yellow";
+                        is_blue = true;
+                    }
+
+                    $("body").addClass(primary);
+                    $("body").removeClass(secondary);
+                    $(".action-buttons").addClass(secondary);
+                    $(".action-buttons").removeClass(primary);
+                }
+                function randomInt(max) {
+                    return Math.floor(Math.random() * max);
+                }
+
+                function getNextWord() {
+                    if (word_data.length == 0){
+                        return null;
+                    }
+                    var index = randomInt(word_data.length);
+                    var next_word = word_data.splice(index, 1)[0];
+                    return next_word;
+                }
+
+                function displayNewWord() {
+                    current_word = getNextWord();
+                    if(current_word == null){
+                        displayFinalPage();
+                        return;
+
+                    }
+                    // Fill with new text
+                    $('.swedish-word h1').text("#"+current_word['id']+" "+current_word['word']);
+                    $('.subtext h2').text("["+current_word['phonetic']+"]");
+                    $('.description').empty();
+                    $('#action-button span').text("Translate me");
+
+                    // Translate when clicked
+                    $('#action-button').data("action", "translate");
+
+                }
+
+                function showTranslation() {
+                    $('.swedish-word h1').text(current_word["word"]);
+                    $('.subtext h2').text(current_word["meaning"]);
+                    $('.description').text(current_word["explanation"]);
+                    $('.social-buttons').show();
+                    $('#action-button span').text("Another one");
+                    $('#action-button').data("action", "next");
+
+                }
+
+                $('.info-link').click(function() {
+                    if(info_showing)
+                        hideInfo();
+                    else
+                        showInfo();
+                });
+
+                $('#action-button').click(function() {
+                    var action = $('#action-button').data("action");
+                    if(action ==="start") {
+                        displayNewWord();
+                    } else if(action ==="translate") {
+                        switchColors();
+                        showTranslation();
+                    } else if(action ==="next") {
+                        switchColors();
+                        $('.social-buttons').hide();
+                        displayNewWord();
+                    } else if(action ==="restart") {
+                        console.log("wish to restart");
+                    }
+                })
+
+                function displayFinalPage() {
+                    $('.swedish-word h1').text("Grattis!");
+                    $('.subtext h2').text("[graw-tees]");
+                    $('.description').text("Or as you would say: congratulations! You are now one step closer to achieve true swedishness. And hopefully ready to work with our Swedish startups. Great! Because that was all the swedish words we have for now. But if you have another one, give us a call or click the button below. Hej då! [hei-doe]");
+
+                    $('#action-button span').text("Start over!");
+                    $('#action-button').data("action", "restart");
+
+                    $('#email-button').show();
+                    $('.social-buttons').show();
+                }
+            });
+
+        </script>
+    </body>
+</html>

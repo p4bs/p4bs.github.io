@@ -1,0 +1,114 @@
+body {
+    font-family: Gotham;
+    font-size: 22px;
+    margin: 0;
+}
+
+body.blue {
+    background-color: 0B5BFC;
+    color: FEDF0B;
+}
+
+body.yellow {
+    background-color: FEDF0B;
+    color: 0B5BFC;
+}
+
+.business-logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50%;
+    margin-right: 0;
+}
+
+.business-logo img{
+    width: 120px;
+}
+
+.info-link {
+    position: absolute;
+
+    right: 10px;
+    top: 10px;
+}
+
+.info-link:hover {
+    color: white;
+    transition: color 0.25s;
+    cursor: pointer;
+}
+
+.info-box {
+    text-align: center;
+    padding-top: 50px;
+    height: 500px;
+    margin-top: -700px;
+    background-color: 0B5BFC;
+    color: FEDF0B;
+}
+
+.info-box .text {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.main {
+    margin: 0 auto;
+    padding-top: 180px;
+    width: 600px;
+    text-align: center;
+}
+
+.main .header {
+    padding-top: 50px;
+}
+
+.main .header h1 {
+    margin-bottom: 5px;
+}
+
+.main .header h2{
+    margin-top: 5px;
+}
+
+.main .action-buttons {
+    margin: 40px auto;
+    display: table;
+}
+
+.action-buttons > div {
+    display: table-cell;
+    margin: 0 20px;
+}
+
+.button {
+    width: 150px;
+    height: 60px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.action-buttons.yellow > div{
+    background-color: FEDF0B;
+    color: 0B5BFC;
+}
+
+.action-buttons.blue > div {
+    background-color: 0B5BFC;
+    color: FEDF0B;
+}
+
+.main .action-buttons .button .text{
+    /*position: relative;*/
+    /*top: 25px;*/
+    line-height: 60px;
+}
+
+#email-button {
+    display: none;
+}
+
+.main .social-buttons {
+    display: none;
+}
