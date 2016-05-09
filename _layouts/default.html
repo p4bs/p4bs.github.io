@@ -65,7 +65,7 @@
             <div class="header">
                 <div class="swedish-word">
                     <h1>
-                        Hello world.
+                        Hello world. (dev.)
                     </h1>
                 </div>
                 <!-- Either or -->
@@ -172,7 +172,6 @@
                     $('.swedish-word h1').text(current_word["word"]);
                     $('.subtext h2').text(current_word["meaning"]);
                     $('.description').text(current_word["explanation"]);
-                    $('.social-buttons').show();
                     $('#action-button span').text("Another one");
                     $('#action-button').data("action", "next");
 
@@ -191,6 +190,7 @@
                         displayNewWord();
                     } else if(action ==="translate") {
                         switchColors();
+                        $('.social-buttons').show();
                         showTranslation();
                     } else if(action ==="next") {
                         switchColors();
