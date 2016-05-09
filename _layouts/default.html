@@ -114,7 +114,6 @@
                         marginTop: "0px"
                     }, 500)
                     info_showing = true;
-
                 }
 
                 function hideInfo(){
@@ -205,8 +204,11 @@
                         restart();
 
                     }
-                })
+                });
 
+                $('#email-button').click(function(){
+                    window.open('mailto:word@businesssweden.se?subject=I%20Have%20a%20Word!');
+                })
                 function restart() {
                     $('.description span').removeClass('.not-intro');
                     word_data = JSON.parse(document.getElementById('words').innerHTML);
