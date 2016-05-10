@@ -163,6 +163,10 @@ body.yellow {
 }
 
 .main .social-buttons i {
-    padding: 0 5px;
+    padding-left: 5px;
     cursor: pointer;
+}
+
+.main .social-buttons i:first-child {
+    padding-left: 0;
 }
