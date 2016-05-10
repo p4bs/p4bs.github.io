@@ -214,6 +214,7 @@
                     var action = $('#action-button').data("action");
                     if(action ==="start") {
                         $('.description span').addClass('not-intro');
+                        $('.peace-hand img').attr('src', 'img/hands/hands-03.png');
                         $('.peace-hand').hide(0);
                         showAudioButton();
                         displayNewWord();
@@ -264,7 +265,6 @@
                     $('.social-buttons').show(0);
                     hideAudioButton();
 
-                    $('.peace-hand img').attr('src', 'img/hands/hands-03.png');
                     $('.peace-hand').show(0);
                 }
 
