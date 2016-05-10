@@ -241,6 +241,14 @@
                     var x = window.top.outerWidth / 2 + window.top.screenX - ( w / 2)
                     window.open("https://www.facebook.com/dialog/share?  app_id=145634995501895&display=popup&href=p4bs.github.io&display=page", "fb-popup", 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+y+', left='+x)
                 });
+                $('#twitter-share').click(function() {
+                    var h = 500;
+                    var w = 700;
+                    var y = window.top.outerHeight / 2 + window.top.screenY - ( h / 2)
+                    var x = window.top.outerWidth / 2 + window.top.screenX - ( w / 2)
+                    window.open("https://twitter.com/intent/tweet?text=Time%20to%20learn%20Swedish!&url=http%3A%2F%2Fp4bs.github.io", "twitter-popup", 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+y+', left='+x)
+                });
+
             });
 
         </script>
