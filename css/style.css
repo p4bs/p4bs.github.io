@@ -85,21 +85,25 @@ body.yellow {
 }
 
 .main .header {
-    padding-top: 20px;
+    padding-top: 10%;
     height: 150px;
 }
 
 .main .header h1 {
     margin-bottom: 5px;
+    font-size: 55px;
 }
 
 .main .header h2{
     margin-top: 5px;
+    font-size: 40px;
 }
 
 .main .description {
     font-family: Gotham-Book;
-    height: 280px;
+    height: 220px;
+    width: 480px;
+    margin: 0 auto;
 }
 
 .main .description span.not-intro {
