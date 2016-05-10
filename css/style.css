@@ -214,6 +214,9 @@ body.yellow {
 /* Tablets and phablets */
 @media (max-width: 800px) {
 
+    .hand {
+        display: none;
+    }
 }
 
 /* Small phones */
