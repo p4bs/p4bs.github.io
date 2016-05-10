@@ -65,12 +65,20 @@ body.yellow {
     text-align: center;
     padding-top: 50px;
     padding-bottom: 50px;
-    height: 500px;
+    height: 550px;
     margin-top: -700px;
     background-color: FEDF0B;
     color: 0B5BFC;
 }
 
+.info-box #info-box-container {
+    position: relative;
+    top: 10%;
+}
+
+.info-box h1 {
+    font-size: 55px;
+}
 .info-box .text {
     width: 560px;
     margin: 0 auto;
@@ -85,7 +93,7 @@ body.yellow {
 }
 
 .main .header {
-    padding-top: 15%;
+    padding-top: 12%;
     height: 100px;
 }
 
