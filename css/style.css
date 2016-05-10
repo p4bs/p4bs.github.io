@@ -8,6 +8,11 @@
   font-style: italic;
 }
 @font-face {
+  font-family: 'Gotham';
+  src: url('fonts/Gotham/Gotham-Bold.otf') format('opentype');
+  font-weight: bold;
+}
+@font-face {
   font-family: 'Gotham-Book';
   src: url('fonts/Gotham/Gotham-Book.otf') format('opentype');
 }
@@ -43,7 +48,6 @@ body.yellow {
 
 .info-link {
     position: absolute;
-    font-family: Gotham-Book;
     font-size: 17px;
     font-weight: bold;
     word-spacing: -3px;
@@ -146,6 +150,7 @@ body.yellow {
     height: 50px;
     margin: 0 auto;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .action-buttons.yellow > div{
