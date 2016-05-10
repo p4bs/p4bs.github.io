@@ -45,6 +45,7 @@ body.yellow {
     position: absolute;
     font-family: Gotham-Book;
     font-size: 17px;
+    font-weight: bold;
     word-spacing: -3px;
     right: 10px;
     top: 10px;
