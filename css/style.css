@@ -145,8 +145,10 @@ body.yellow {
     display: none;
     font-size: 30px;
     margin: 0px auto;
+    color: white;
 }
 
 .main .social-buttons i {
     padding: 0 5px;
+    cursor: pointer;
 }
