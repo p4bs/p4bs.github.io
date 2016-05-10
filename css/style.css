@@ -90,6 +90,17 @@ body.yellow {
     font-family: Gotham-Book;
 }
 
+.info-box .pointing-hand {
+    position: relative;
+    right: -15px;
+    top: -265px;
+    float: right;
+}
+
+.info-box .pointing-hand img{
+    width: 25vw;
+}
+
 #logotype {
     width: 650px;
     margin-top: -30px;
