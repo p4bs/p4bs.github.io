@@ -69,14 +69,14 @@
         <div class="main">
             <div class="header">
                 <div class="swedish-word">
-                    <h1>
+                    <span>
                         Hello world.
-                    </h1>
+                    </span>
                 </div>
                 <!-- Either or -->
                 <div class="subtext">
-                    <h2>
-                    </h2>
+                    <span>
+                    </span>
                 </div>
             </div>
             <div class="description">
@@ -166,8 +166,8 @@
 
                     }
                     // Fill with new text
-                    $('.swedish-word h1').text("#"+current_word['id']+" "+current_word['word']);
-                    $('.subtext h2').text("["+current_word['phonetic']+"]").css("font-style", "normal");;
+                    $('.swedish-word span').text("#"+current_word['id']+" "+current_word['word']);
+                    $('.subtext span').text("["+current_word['phonetic']+"]").css("font-style", "normal");;
                     $('.description span').empty();
                     $('#action-button span').text("Translate me");
 
@@ -177,8 +177,8 @@
                 }
 
                 function showTranslation() {
-                    $('.swedish-word h1').text(current_word["word"]);
-                    $('.subtext h2').text(current_word["meaning"]).css("font-style", "italic");
+                    $('.swedish-word span').text(current_word["word"]);
+                    $('.subtext span').text(current_word["meaning"]).css("font-style", "italic");
                     $('.description span').text(current_word["explanation"]);
                     $('#action-button span').text("Another one");
                     $('#action-button').data("action", "next");
@@ -222,8 +222,8 @@
                     displayNewWord();
                 }
                 function displayFinalPage() {
-                    $('.swedish-word h1').text("Grattis!");
-                    $('.subtext h2').text("[graw-tees]");
+                    $('.swedish-word span').text("Grattis!");
+                    $('.subtext span').text("[graw-tees]");
                     $('.description span').text("Or as you would say: congratulations! You are now one step closer to achieve true swedishness. And hopefully ready to work with our Swedish startups. Great! Because that was all the swedish words we have for now. But if you have another one, give us a call or click the button below. Hej då! [hei-doe]");
 
                     $('#action-button span').text("Start over!");
