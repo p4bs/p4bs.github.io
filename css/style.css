@@ -110,12 +110,16 @@ body.yellow {
     font-size: 55px;
 }
 
+.subtext-shift-right {
+    margin-left: 45px;
+}
+
 .main .header .subtext {
     font-size: 40px;
 }
 
 .subtext #audio-button {
-    display: none;
+    visibility: hidden;
     color: white;
     cursor: pointer;
 }

@@ -183,6 +183,16 @@
 
                 }
 
+                function showAudioButton() {
+                    $('.subtext').addClass("subtext-shift-right");
+                    $('#audio-button').css('visibility', 'visible');
+                }
+
+                function hideAudioButton() {
+                    $('.subtext').removeClass("subtext-shift-right");
+                    $('#audio-button').css('visibility', 'hidden');
+                }
+
                 function showTranslation() {
                     $('.swedish-word span').text(current_word["word"]);
                     $('.subtext span').text(current_word["meaning"]).css("font-style", "italic");
@@ -202,17 +212,17 @@
                     var action = $('#action-button').data("action");
                     if(action ==="start") {
                         $('.description span').addClass('not-intro');
-                        $('#audio-button').show();
+                        showAudioButton();
                         displayNewWord();
                     } else if(action ==="translate") {
                         switchColors();
-                        $('.social-buttons').show();
-                        $('#audio-button').hide();
+                        $('.social-buttons').show(0);
+                        hideAudioButton();
                         showTranslation();
                     } else if(action ==="next") {
                         switchColors();
-                        $('.social-buttons').hide();
-                        $('#audio-button').show();
+                        $('.social-buttons').hide(0);
+                        showAudioButton();
                         displayNewWord();
                     } else if(action ==="restart") {
                         restart();
@@ -226,8 +236,10 @@
                 function restart() {
                     $('.description span').removeClass('.not-intro');
                     word_data = JSON.parse(document.getElementById('words').innerHTML);
-                    $('#email-button').hide();
-                    $('.social-buttons').hide();
+                    $('#email-button').hide(0);
+                    $('.social-buttons').hide(0);
+
+                    showAudioButton();
                     displayNewWord();
                 }
                 function displayFinalPage() {
@@ -238,9 +250,9 @@
                     $('#action-button span').text("Start over!");
                     $('#action-button').data("action", "restart");
 
-                    $('#email-button').show();
-                    $('.social-buttons').show();
-                    $('#audio-button').hide();
+                    $('#email-button').show(0);
+                    $('.social-buttons').show(0);
+                    hideAudioButton();
                 }
 
                 // Social buttons
