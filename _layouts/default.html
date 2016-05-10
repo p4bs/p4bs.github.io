@@ -44,9 +44,6 @@
         <div class="business-logo">
             <img src="img/BusSwe_Logo-TL_White.png">
         </div>
-        <div class="desktop-hand">
-
-        </div>
         <div class="info-link">
             + info
         </div>
@@ -113,6 +110,10 @@
             <div class="social-buttons">
                 <i class="fa fa-twitter" id="twitter-share" aria-hidden="true"></i>
                 <i class="fa fa-facebook" id="facebook-share" aria-hidden="true"></i>
+            </div>
+
+            <div class="peace-hand">
+                <img src="img/hands/hands-01.png">
             </div>
         </div>
 
@@ -213,6 +214,7 @@
                     var action = $('#action-button').data("action");
                     if(action ==="start") {
                         $('.description span').addClass('not-intro');
+                        $('.peace-hand').hide(0);
                         showAudioButton();
                         displayNewWord();
                     } else if(action ==="translate") {
@@ -244,9 +246,11 @@
                     word_data = JSON.parse(document.getElementById('words').innerHTML);
                     $('#email-button').hide(0);
                     $('.social-buttons').hide(0);
+                    $('.peace-hand').hide(0);
 
                     showAudioButton();
                     displayNewWord();
+
                 }
                 function displayFinalPage() {
                     $('.swedish-word span').text("Grattis!");
@@ -259,6 +263,9 @@
                     $('#email-button').show(0);
                     $('.social-buttons').show(0);
                     hideAudioButton();
+
+                    $('.peace-hand img').attr('src', 'img/hands/hands-03.png');
+                    $('.peace-hand').show(0);
                 }
 
                 // Social buttons
