@@ -171,7 +171,13 @@ body.yellow {
     padding-left: 0;
 }
 
-@media (max-width: 650px) {
+/* Tablets and phablets */
+@media (max-width: 800px) {
+
+}
+
+/* Small phones */
+@media (max-width: 400px) {
     body {
         font-size: 12px;
     }
@@ -233,5 +239,4 @@ body.yellow {
         font-size: 45px;
         padding-left: 10px;
     }
-
 }
