@@ -110,12 +110,9 @@ body.yellow {
     font-size: 55px;
 }
 
-.subtext-shift-right {
-    margin-left: 45px;
-}
-
 .main .header .subtext {
     font-size: 40px;
+    margin-left: 45px;
 }
 
 .subtext #audio-button {
