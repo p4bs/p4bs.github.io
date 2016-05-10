@@ -44,6 +44,7 @@ body.yellow {
 
 .business-logo img{
     width: 170px;
+    cursor: pointer;
 }
 
 .info-link {
