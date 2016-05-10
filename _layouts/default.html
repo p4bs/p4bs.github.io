@@ -18,21 +18,24 @@
                     "word": "Hinna",
                     "phonetic": "hee-nah",
                     "meaning": "To make it in time",
-                    "explanation": "When you struggle to make it on time, why use five words when you can use one? That’s Swedish efficiency right there. Maybe that’s part of the explanation why our companies are so successful? Because using the word hinna, makes it easier to hinna. Great word. Use it."
+                    "explanation": "When you struggle to make it on time, why use five words when you can use one? That’s Swedish efficiency right there. Maybe that’s part of the explanation why our companies are so successful? Because using the word hinna, makes it easier to hinna. Great word. Use it.",
+                    "audio-file": "1Hinna.wav"
                 },
                 {
                   "id": 2,
                   "word": "Dygna",
                   "phonetic": "dyng-nah",
                   "meaning": "Staying awake for 24 hours",
-                  "explanation": "You all know what we’re talking about. Sometimes you just have to dygna. Like when you’re a highly advanced procrastinator, and that deadline hits you right in the face. Like this: “Wow, you look tired, the bags under your eyes are huge” “Yes, I had to dygna because I couldn’t get that damn code to work”. We all have to dygna sometimes, so why not have a word for it? Let’s just use dygna from now on."
+                  "explanation": "You all know what we’re talking about. Sometimes you just have to dygna. Like when you’re a highly advanced procrastinator, and that deadline hits you right in the face. Like this: “Wow, you look tired, the bags under your eyes are huge” “Yes, I had to dygna because I couldn’t get that damn code to work”. We all have to dygna sometimes, so why not have a word for it? Let’s just use dygna from now on.",
+                  "audio-file": "2Dygna.wav"
                 },
                 {
                   "id": 3,
                   "word": "Påtår",
                   "phonetic": "poe-t-oer",
                   "meaning": "On toes",
-                  "explanation": "A very Swedish word, closely related to the fika. It basically means refill. But beware! It’s only applicable to coffee, but still very useful. Because if you work hard (like a swede) you need that constant flow of coffee. You need påtår. Especially if you decide to dygna. So come on world, let’s start using Påtår."
+                  "explanation": "A very Swedish word, closely related to the fika. It basically means refill. But beware! It’s only applicable to coffee, but still very useful. Because if you work hard (like a swede) you need that constant flow of coffee. You need påtår. Especially if you decide to dygna. So come on world, let’s start using Påtår.",
+                  "audio-file": "3Påtår.wav"
                 }
             ]
         </script>
@@ -80,6 +83,7 @@
                 <div class="subtext">
                     <span>
                     </span>
+                    <i class="fa fa-volume-up" id="audio-button" aria-hidden="true"></i>
                 </div>
             </div>
             <div class="description">
@@ -185,7 +189,6 @@
                     $('.description span').text(current_word["explanation"]);
                     $('#action-button span').text("Another one");
                     $('#action-button').data("action", "next");
-
                 }
 
                 $('.info-link').click(function() {
@@ -199,14 +202,17 @@
                     var action = $('#action-button').data("action");
                     if(action ==="start") {
                         $('.description span').addClass('not-intro');
+                        $('#audio-button').show();
                         displayNewWord();
                     } else if(action ==="translate") {
                         switchColors();
                         $('.social-buttons').show();
+                        $('#audio-button').hide();
                         showTranslation();
                     } else if(action ==="next") {
                         switchColors();
                         $('.social-buttons').hide();
+                        $('#audio-button').show();
                         displayNewWord();
                     } else if(action ==="restart") {
                         restart();
@@ -234,6 +240,7 @@
 
                     $('#email-button').show();
                     $('.social-buttons').show();
+                    $('#audio-button').hide();
                 }
 
                 // Social buttons
@@ -251,6 +258,11 @@
                     var x = window.top.outerWidth / 2 + window.top.screenX - ( w / 2)
                     window.open("https://twitter.com/intent/tweet?text=Time%20to%20learn%20Swedish!&url=http%3A%2F%2Fp4bs.github.io", "twitter-popup", 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+y+', left='+x)
                 });
+
+                $('#audio-button').click(function() {
+                    var audio = new Audio('audio/'+current_word['audio-file']);
+                    audio.play();
+                })
 
             });
 

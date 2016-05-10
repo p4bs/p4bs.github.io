@@ -105,6 +105,12 @@ body.yellow {
     font-size: 40px;
 }
 
+.subtext #audio-button {
+    display: none;
+    color: white;
+    cursor: pointer;
+}
+
 .main .description {
     font-family: Gotham-Book;
     height: 220px;
