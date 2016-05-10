@@ -213,7 +213,7 @@ body.yellow {
 }
 
 /* Tablets and phablets */
-@media (max-width: 800px) {
+@media (max-width: 840px) {
 
     .hand {
         display: none;
