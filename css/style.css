@@ -108,18 +108,21 @@ body.yellow {
 }
 
 .main .action-buttons {
-    margin: 40px auto 15px;
+    margin: 30px auto 15px;
     display: table;
 }
 
 .action-buttons > div {
     display: table-cell;
-    margin: 0 20px;
+}
+
+.action-buttons > div:first-child {
+    margin-right: 20px;
 }
 
 .button {
-    width: 180px;
-    height: 60px;
+    width: 150px;
+    height: 50px;
     margin: 0 auto;
     cursor: pointer;
 }
@@ -135,7 +138,7 @@ body.yellow {
 }
 
 .main .action-buttons .button .text{
-    line-height: 60px;
+    line-height: 50px;
 }
 
 #email-button {
