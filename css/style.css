@@ -83,7 +83,7 @@ body.yellow {
 
 .info-box #info-box-container {
     position: relative;
-    top: 20%;
+    top: 8%;
     z-index: 20;
 }
 
@@ -107,7 +107,7 @@ body.yellow {
 .info-box .pointing-hand {
     position: relative;
     right: 0px;
-    top: -265px;
+    top: -295px;
     float: right;
     overflow: hidden;
 }
@@ -239,6 +239,11 @@ body.yellow {
     .hand {
         display: none;
     }
+
+    .business-logo img{
+        width: 90px;
+    }
+
 }
 @media (max-width: 450px)
 {
@@ -248,10 +253,6 @@ body.yellow {
 
     #logotype {
         max-width: 100%;
-    }
-
-    .business-logo img{
-        width: 90px;
     }
 
     .info-box {
@@ -265,7 +266,7 @@ body.yellow {
     }
 
     .info-box #info-box-container {
-        padding-top: 2vh;
+        padding-top: 4%;
         max-width: 80%;
         margin: 0 auto;
     }
