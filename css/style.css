@@ -316,7 +316,7 @@ body.yellow {
     }
 
     .main .action-buttons {
-        margin: 5px auto;
+        margin: 5px auto 15px;
     }
 
     .main .social-buttons i {
