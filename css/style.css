@@ -113,6 +113,7 @@ body.yellow {
 
 .info-box .pointing-hand img {
     width: 35vw;
+    min-height: 380px;
     position: relative;
     right: -75px;
 }
@@ -128,6 +129,7 @@ body.yellow {
 
 .peace-hand img {
     width: 25vw;
+    min-height: 460px;
     position: relative;
     right: -20px;
 }
