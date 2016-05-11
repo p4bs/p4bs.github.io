@@ -339,6 +339,11 @@ body.yellow {
         font-size: 22px;
     }
 
+    .main .description span {
+        top: -20px;
+        position: relative;
+    }
+
     .main {
         margin-top: 10vh;
     }
