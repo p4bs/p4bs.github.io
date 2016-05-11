@@ -54,6 +54,7 @@ body.yellow {
     word-spacing: -3px;
     right: 10px;
     top: 10px;
+    z-index: 100;
 }
 
 .info-link-in-box {
