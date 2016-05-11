@@ -286,7 +286,7 @@ body.yellow {
         max-width: 100%;
         height: inherit;
         margin-top: 10px;
-        min-height: 200px;
+        min-height: 170px;
     }
 
     .main .description span.not-intro {
@@ -340,7 +340,7 @@ body.yellow {
     }
 
     .main {
-        /*margin-top: 14vh;*/
+        margin-top: 10vh;
     }
 
 }
