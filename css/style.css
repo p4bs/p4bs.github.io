@@ -293,7 +293,15 @@ body.yellow {
     }
 
     .main .header .subtext {
-        font-size: 30px;
+        font-size: 21px;
+        margin-left: auto;
+    }
+
+    .subtext #audio-button {
+        position: absolute;
+        right: 9%;
+        font-size: 50px;
+        margin-top: -50px;
     }
 
     .main .action-buttons {
