@@ -19,7 +19,8 @@
                     "phonetic": "hee-nah",
                     "meaning": "To make it in time",
                     "explanation": "When you struggle to make it on time, why use five words when you can use one? That’s Swedish efficiency right there. Maybe that’s part of the explanation why our companies are so successful? Because using the word hinna, makes it easier to hinna. Great word. Use it.",
-                    "audio-file": "1Hinna.mp3"
+                    "audio-file": "1Hinna.mp3",
+                    "share-url": "hinna.html"
                 },
                 {
                   "id": 2,
@@ -27,7 +28,8 @@
                   "phonetic": "dyng-nah",
                   "meaning": "Staying awake for 24 hours",
                   "explanation": "You all know what we’re talking about. Sometimes you just have to dygna. Like when you’re a highly advanced procrastinator, and that deadline hits you right in the face. Like this: “Wow, you look tired, the bags under your eyes are huge” “Yes, I had to dygna because I couldn’t get that damn code to work”. We all have to dygna sometimes, so why not have a word for it? Let’s just use dygna from now on.",
-                  "audio-file": "2Dygna.mp3"
+                  "audio-file": "2Dygna.mp3",
+                  "share-url": "dygna.html"
                 },
                 {
                   "id": 3,
@@ -35,7 +37,8 @@
                   "phonetic": "poe-t-oer",
                   "meaning": "On toes",
                   "explanation": "A very Swedish word, closely related to the fika. It basically means refill. But beware! It’s only applicable to coffee, but still very useful. Because if you work hard (like a swede) you need that constant flow of coffee. You need påtår. Especially if you decide to dygna. So come on world, let’s start using Påtår.",
-                  "audio-file": "3Påtår.mp3"
+                  "audio-file": "3Påtår.mp3",
+                  "share-url": "patar.html"
                 }
             ]
         </script>
@@ -272,12 +275,16 @@
                 }
 
                 // Social buttons
+                function get_share_url() {
+                    return "p4bs.github.io/word_pages/"+current_word['share-url'];
+                }
+
                 $('#facebook-share').click(function() {
                     var h = 500;
                     var w = 700;
                     var y = window.top.outerHeight / 2 + window.top.screenY - ( h / 2)
                     var x = window.top.outerWidth / 2 + window.top.screenX - ( w / 2)
-                    window.open("https://www.facebook.com/dialog/share?  app_id=145634995501895&display=popup&href=p4bs.github.io&display=page", "fb-popup", 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+y+', left='+x)
+                    window.open("https://www.facebook.com/dialog/share?  app_id=145634995501895&display=popup&href="+get_share_url()+"&display=page", "fb-popup", 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+y+', left='+x)
                 });
                 $('#twitter-share').click(function() {
                     var h = 500;
