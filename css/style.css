@@ -283,7 +283,7 @@ body.yellow {
 
     .main {
         max-width: 80%;
-        margin-top: 14vh;
+        margin-top: 35%;
     }
 
     .main .description {
@@ -321,7 +321,7 @@ body.yellow {
     }
 
     .main .action-buttons {
-        margin: 5px auto 5px;
+        margin: 5px auto 15px;
     }
 
     .main .social-buttons i {
