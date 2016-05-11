@@ -266,7 +266,9 @@
                     $('.social-buttons').show(0);
                     hideAudioButton();
 
-                    $('.peace-hand').show(0);
+                    if(window.innerWidth>840){
+                        $('.peace-hand').show(0);
+                    }
                 }
 
                 // Social buttons
