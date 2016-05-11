@@ -258,10 +258,12 @@ body.yellow {
 
     .info-box {
         max-width: 100%;
-        padding-top: 5px;
+        height: 90%;
+        padding: 0;
     }
 
     #info-box-container {
+        padding-top: 5vh;
         max-width: 80%;
         margin: 0 auto;
     }
