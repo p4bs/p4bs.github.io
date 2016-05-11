@@ -227,9 +227,13 @@ body.yellow {
 }
 
 /* Small phones */
-@media (max-width: 400px) {
+@media (max-width: 450px) {
     body {
         font-size: 12px;
+    }
+
+    #logotype {
+        max-width: 100%;
     }
 
     .business-logo img{
