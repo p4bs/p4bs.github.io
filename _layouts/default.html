@@ -50,9 +50,9 @@
         <div class="info-box">
             <div id="info-box-container">
                 <div class="header">
-                    <h1>
+                    <span>
                         Who Are We?
-                    </h1>
+                    </span>
                 </div>
                 <div class="text">
                     This is an initiative by Business Sweden. And who are we? Half-government, half-business. Suits? Yes. But
@@ -67,9 +67,9 @@
                     <br>
                     Are you the world and interested in Swedish startups? <a href="http://www.business-sweden.se/en/Invest/" target="_blank">Contact us.</a>
                 </div>
-            </div>
-            <div class="pointing-hand hand">
-                <img src="img/hands/pointing-hand.svg">
+                <div class="pointing-hand hand">
+                    <img src="img/hands/pointing-hand.svg">
+                </div>
             </div>
         </div>
         <div class="main">
@@ -135,7 +135,7 @@
                 function hideInfo(){
                     $('.info-link').text("+ info").removeClass("info-link-in-box");
                     $('.info-box').animate({
-                        marginTop: "-700px"
+                        marginTop: "-90vh"
                     }, 500)
                     info_showing = false;
                 }
