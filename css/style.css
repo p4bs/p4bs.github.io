@@ -137,14 +137,13 @@ body.yellow {
 }
 
 .main {
-    margin: 0 auto;
+    margin: 3% auto 0;
     width: 600px;
-    margin-top: 5%;
     text-align: center;
 }
 
 .main .header {
-    padding-top: 12%;
+    padding-top: 10%;
     height: 120px;
 }
 
