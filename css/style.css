@@ -331,6 +331,10 @@ body.yellow {
 
 @media (max-width: 450px) and (max-height: 500px)
 {
+
+    .business-logo img {
+        width: 50px;
+    }
     .info-box .header span {
         font-size: 22px;
     }
