@@ -261,6 +261,7 @@ body.yellow {
 
     .main {
         max-width: 80%;
+        padding-top: 50%;
     }
 
     .main .description {
