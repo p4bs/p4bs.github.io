@@ -60,10 +60,16 @@ body.yellow {
     color: 0B5BFC;
 }
 
+
 .info-link:hover {
-    color: white;
-    transition: color 0.25s;
-    cursor: pointer;
+        cursor: pointer;
+}
+
+@media (min-width: 840px) {
+    .info-link:hover {
+        color: white;
+        transition: color 0.25s;
+    }
 }
 
 .info-box {
