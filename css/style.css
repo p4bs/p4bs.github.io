@@ -25,13 +25,13 @@ body {
 }
 
 body.blue {
-    background-color: 0B5BFC;
-    color: FEDF0B;
+    background-color: #0B5BFC;
+    color: #FEDF0B;
 }
 
 body.yellow {
-    background-color: FEDF0B;
-    color: 0B5BFC;
+    background-color: #FEDF0B;
+    color: #0B5BFC;
 }
 
 .business-logo {
@@ -57,7 +57,7 @@ body.yellow {
 }
 
 .info-link-in-box {
-    color: 0B5BFC;
+    color: #0B5BFC;
 }
 
 
@@ -76,8 +76,8 @@ body.yellow {
     text-align: center;
     height: 90vh;
     margin-top: -90vh;
-    background-color: FEDF0B;
-    color: 0B5BFC;
+    background-color: #FEDF0B;
+    color: #0B5BFC;
 }
 
 .info-box #info-box-container {
@@ -197,13 +197,13 @@ body.yellow {
 }
 
 .action-buttons.yellow > div{
-    background-color: FEDF0B;
-    color: 0B5BFC;
+    background-color: #FEDF0B;
+    color: #0B5BFC;
 }
 
 .action-buttons.blue > div {
-    background-color: 0B5BFC;
-    color: FEDF0B;
+    background-color: #0B5BFC;
+    color: #FEDF0B;
 }
 
 .main .action-buttons .button .text{
