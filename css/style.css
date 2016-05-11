@@ -225,6 +225,7 @@ body.yellow {
 
 .main .social-buttons i:first-child {
     padding-left: 0;
+    margin-left: -10px;
 }
 
 /* Tablets and phablets */
