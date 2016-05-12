@@ -314,19 +314,19 @@ body.yellow {
     }
 
     .main .header .swedish-word {
-        font-size: 40px;
+        font-size: 35px;
     }
 
     .main .header .subtext {
         font-size: 18px;
         margin-left: auto;
+        max-height: 20px;
     }
 
     .subtext #audio-button {
-        position: absolute;
-        right: 9%;
         font-size: 50px;
-        margin-top: -15px;
+        /*margin-top: -15px;*/
+        display: block;
         display: none;
     }
 

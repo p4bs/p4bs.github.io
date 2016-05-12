@@ -477,10 +477,16 @@
                 }
 
                 function showAudioButton() {
+                    if( $(window).width()<500 ){
+                        $('#audio-button').css('display', 'block');
+                    }
                     $('#audio-button').css('visibility', 'visible');
                 }
 
                 function hideAudioButton() {
+                    if( $(window).width()<500 ){
+                        $('#audio-button').css('display', 'none');
+                    }
                     $('#audio-button').css('visibility', 'hidden');
                 }
 
@@ -506,8 +512,10 @@
                         $('.peace-hand img').attr('src', 'img/hands/thumb-hand.svg');
                         $('.peace-hand').hide(0);
 
-                        // display audio button
-                        $('#audio-button').show();
+                        // display audio button first time
+
+                        $('#audio-button').show()
+
                         showAudioButton();
                         displayNewWord();
                     } else if(action ==="translate") {
