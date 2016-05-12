@@ -411,7 +411,6 @@
         <script>
             $( document ).ready(function(){
                 var info_showing = false;
-                var is_blue = true;
                 var word_data = JSON.parse(document.getElementById('words').innerHTML);
                 var current_word = null;
 
@@ -431,16 +430,19 @@
                     info_showing = false;
                 }
 
-                function switchColors(){
-                    if(is_blue){
-                        var primary = "yellow";
-                        var secondary = "blue";
-                        is_blue = false;
-                    } else {
-                        var primary = "blue";
-                        var secondary = "yellow";
-                        is_blue = true;
-                    }
+                function setBlue() {
+                    var primary = "blue";
+                    var secondary = "yellow";
+
+                    $("body").addClass(primary);
+                    $("body").removeClass(secondary);
+                    $(".action-buttons").addClass(secondary);
+                    $(".action-buttons").removeClass(primary);
+                }
+
+                function setYellow() {
+                    var primary = "yellow";
+                    var secondary = "blue";
 
                     $("body").addClass(primary);
                     $("body").removeClass(secondary);
@@ -465,6 +467,7 @@
                     $('.subtext span').text("["+current_word['phonetic']+"]").css("font-style", "normal");
                     $('.description span').empty();
                     $('#action-button span').text("Translate me");
+                    $('#email-button').hide(0);
 
                     // Translate when clicked
                     $('#action-button').data("action", "translate");
@@ -490,6 +493,7 @@
                     $('.subtext span').text(current_word["meaning"]).css("font-style", "italic");
                     $('.description span').text(current_word["explanation"]);
                     $('#action-button span').text("Another one");
+                    $('#email-button').hide(0);
 
                     if (word_data.length == 0){
                         $('#action-button').data("action", "end");
@@ -603,8 +607,7 @@
                     History.pushState({
                             current_word: current_word,
                             word_data: word_data,
-                            page_type: action,
-                            is_blue: is_blue
+                            page_type: action
                         },
                         "Take Over The Word - " + (word? word : title),
                         "?"+title
@@ -616,9 +619,9 @@
                     current_word = state_data['current_word'];
                     word_data = state_data['word_data']
                     action = state_data['page_type'];
-                    is_blue = state_data['is_blue'];
 
                     if(action ==="start") {
+                        setBlue();
                         $('.description span').addClass('not-intro');
                         $('.peace-hand img').attr('src', 'img/hands/thumb-hand.svg');
                         $('.peace-hand').hide(0);
@@ -630,19 +633,19 @@
                         displayNewWord();
 
                     } else if(action ==="translate") {
-                        switchColors();
+                        setYellow();
                         $('.social-buttons').show(0);
 
                         hideAudioButton();
                         displayTranslation();
 
                     } else if(action ==="next") {
-                        switchColors();
+                        setBlue();
                         $('.social-buttons').hide(0);
                         showAudioButton();
                         displayNewWord();
                     } else if (action === "end") {
-                        switchColors();
+                        setBlue();
                         $('.social-buttons').hide(0);
                         showAudioButton();
                         displayFinalPage();
