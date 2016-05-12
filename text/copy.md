@@ -43,7 +43,7 @@ Lördagsgodis = Saturday candy
 It’s ok to eat cinnamon buns everyday at the five o’clock fika. The whole office does it. But when it comes to candy, we’re only allowed to eat it on Saturdays. Or at least according to this word, some of us cheat. But If you only eat candy on Saturdays you can binge all you want, without feeling guilty. The highlight of the week! Let’s use lördagsgodis from now on.
 
 #12 Fika [feekha]
-Fika = To have coffee and something to eat
+Fika = To have coffee
 The core of the Swedish mentality. If you ask a Swede “what’s the most Swedish thing?”, don’t be surprised if fika is the answer. So what’s the deal? Well, Swedes have fika all the time. A short break when you get together over coffee and something sweet. And for a Tinder date, it feels more safe to suggest a fika rather than that Wagner Opera or dinner with the parents. So come on world, let’s start using fika.
 
 #13 After work [eiftur jawbhet]
@@ -51,7 +51,7 @@ After work = After work
 In Swedish After work doesn’t mean the specific time after work. It’s when you go for a beer or a glass of wine, after work. Maybe it’s because we don’t want to say “grab a beer” or “hit the pub”, in case the boss would hear us. Or maybe it’s because drinks after work is something more than just drinks. It definitely deserves its own word.
 
 #14 Dåndimpen [dawn-dimp-ehn]
-Dåndimpen = When something makes you crazy
+Dåndimpen = Go crazy
 Like when your dry cleaner has miscoloured your best outfit. Or your most important pitch this year is being canceled, without any explanation. Or you get billed 15 euros for tap water. Dåndimpen is such a great word it gives you dåndimpen. You need it, don’t you?
 
 #15 Duktig [dukh-tee]
@@ -119,7 +119,7 @@ Jhu = Yes (sort of)
 Don’t be surprised if a Swede does a sharp intake of breath that sounds like “Jhu” when you’re talking to them. And no, we’re not surprised or scared. We simply agree with you! It actually means “Yes” or “I agree”. A brilliant word/sound. Say schfuup to the word!
 
 #31 Vaska [waskh-a]
-Vaska = Pour expensive alcohol in the sink
+Vaska = Pour out alcohol
 When your business hits that unicorn-level, you might have so much money to spend that you have to be creative about it. The Swedes have a solution for this. We vaska expensive champagne, which means you order it at the club and ask the bartender to pour it in the sink. It’s so stupid it must have a word.
 
 #32 Jobbig [jaw-big]
