@@ -141,7 +141,7 @@ body.yellow {
 
 .main {
     margin: 3% auto 0;
-    width: 650px;
+    width: 800px;
     text-align: center;
 }
 
@@ -151,7 +151,7 @@ body.yellow {
 }
 
 .main .header .swedish-word {
-    font-size: 90px;
+    font-size: 78px;
 }
 
 .main .header .subtext {
@@ -244,8 +244,15 @@ body.yellow {
         width: 90px;
     }
 
+    .main {
+        max-width: 650px;
+    }
     .main .header .swedish-word {
         font-size: 69px;
+    }
+
+    .main .header .subtext {
+        font-size: 35px;
     }
 }
 
