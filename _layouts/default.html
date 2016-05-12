@@ -5,7 +5,7 @@
         <meta property="og:url" content="http://takeovertheword.com" />
         <meta property="og:title" content="Take over the Word!" />
         <!-- <meta property='og:image' content='http://takeovertheword.com' /> -->
-        <meta property="og:description" content="Hello World! Time to start learning some Swedish." />
+        <meta property="og:description" content="Time to start learning some Swedish." />
 
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
         <script src="lib/historyjs/scripts/bundled/html4+html5/native.history.js"></script>
@@ -557,6 +557,8 @@
 
                 // Social buttons
                 function get_share_url() {
+                    if(!current_word)
+                        return "takeovertheword.com";
                     return "takeovertheword.com/word_pages/"+current_word['share-url'];
                 }
 
