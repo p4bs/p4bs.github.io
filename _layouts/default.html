@@ -465,7 +465,6 @@
                     // Fill with new text
                     $('.swedish-word span').text("#"+current_word['id']+" "+current_word['word']);
                     $('.subtext span').text("["+current_word['phonetic']+"]").css("font-style", "normal");
-                    $('.subtext').addClass('phonetic');
                     $('.description span').empty();
                     $('#action-button span').text("Translate me");
                     $('#email-button').hide(0);
@@ -492,7 +491,6 @@
                 function displayTranslation() {
                     $('.swedish-word span').text(current_word["word"]);
                     $('.subtext span').text(current_word["meaning"]).css("font-style", "italic");
-                    $('.subtext').removeClass('phonetic');
                     $('.description span').text(current_word["explanation"]);
                     $('#action-button span').text("Another one");
                     $('#email-button').hide(0);
@@ -548,7 +546,6 @@
                     $('#action-button span').text("Start over!");
                     $('#action-button').data("action", "restart");
 
-                    $('.subtext').removeClass('phonetic');
                     $('#email-button').show(0);
                     $('.social-buttons').show(0);
                     hideAudioButton();

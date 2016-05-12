@@ -165,11 +165,6 @@ body.yellow {
     cursor: pointer;
 }
 
-.main .header .phonetic {
-    font-size: 60px;
-    margin-top: 10%;
-}
-
 .main .description {
     font-family: Gotham-Book, Sans-Serif;
     height: 220px;
@@ -259,12 +254,6 @@ body.yellow {
     .main .header .subtext {
         font-size: 35px;
     }
-
-    .main .header .phonetic {
-        font-size: 60px;
-        margin-top: 10%;
-    }
-
 }
 
 @media (max-width: 450px)
