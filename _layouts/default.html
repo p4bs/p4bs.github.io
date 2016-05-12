@@ -8,7 +8,7 @@
         <meta property="og:description" content="Hello World! Time to start learning some Swedish." />
 
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
-        <script src="lib/historyjs/scripts/bundled/html4+html5/zepto.history.js"></script>
+        <script src="lib/historyjs/scripts/bundled/html4+html5/native.history.js"></script>
 
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
@@ -453,21 +453,13 @@
                 }
 
                 function getNextWord() {
-                    if (word_data.length == 0){
-                        return null;
-                    }
                     var index = randomInt(word_data.length);
                     var next_word = word_data.splice(index, 1)[0];
                     return next_word;
                 }
 
                 function displayNewWord() {
-                    current_word = getNextWord();
-                    if(current_word == null){
-                        displayFinalPage();
-                        return;
 
-                    }
                     // Fill with new text
                     $('.swedish-word span').text("#"+current_word['id']+" "+current_word['word']);
                     $('.subtext span').text("["+current_word['phonetic']+"]").css("font-style", "normal");
@@ -493,12 +485,17 @@
                     $('#audio-button').css('visibility', 'hidden');
                 }
 
-                function showTranslation() {
+                function displayTranslation() {
                     $('.swedish-word span').text(current_word["word"]);
                     $('.subtext span').text(current_word["meaning"]).css("font-style", "italic");
                     $('.description span').text(current_word["explanation"]);
                     $('#action-button span').text("Another one");
-                    $('#action-button').data("action", "next");
+
+                    if (word_data.length == 0){
+                        $('#action-button').data("action", "end");
+                    } else {
+                        $('#action-button').data("action", "next");
+                    }
                 }
 
                 $('.info-link').click(function() {
@@ -510,30 +507,11 @@
 
                 $('#action-button').click(function() {
                     var action = $('#action-button').data("action");
-                    if(action ==="start") {
-                        $('.description span').addClass('not-intro');
-                        $('.peace-hand img').attr('src', 'img/hands/thumb-hand.svg');
-                        $('.peace-hand').hide(0);
-
-                        // display audio button first time
-
-                        $('#audio-button').show()
-
-                        showAudioButton();
-                        displayNewWord();
-                    } else if(action ==="translate") {
-                        switchColors();
-                        $('.social-buttons').show(0);
-                        hideAudioButton();
-                        showTranslation();
-                    } else if(action ==="next") {
-                        switchColors();
-                        $('.social-buttons').hide(0);
-                        showAudioButton();
-                        displayNewWord();
-                    } else if(action ==="restart") {
-                        restart();
-
+                    if(action !== "translate") {
+                        current_word = getNextWord();
+                        stateChange();
+                    } else  {
+                        stateChange();
                     }
                 });
 
@@ -548,13 +526,13 @@
                 function restart() {
                     $('.description span').removeClass('.not-intro');
                     word_data = JSON.parse(document.getElementById('words').innerHTML);
+                    current_word = getNextWord();
                     $('#email-button').hide(0);
                     $('.social-buttons').hide(0);
                     $('.peace-hand').hide(0);
 
                     showAudioButton();
                     displayNewWord();
-
                 }
                 function displayFinalPage() {
                     $('.swedish-word span').text("Grattis!");
@@ -597,7 +575,81 @@
                     var audio = new Audio('audio/'+current_word['audio-file']);
                     audio.play();
                 })
+                var i = 0;
+                // Let's do history
+                var History = window.History;
+                History.Adapter.bind(window,'statechange',function(){
+                    var State = History.getState();
+                    // History.log(State.data, State.title, State.url);
+                    // If back button loadHistory()
+                    loadState(State.data)
+                });
 
+                function stateChange() {
+                    var action =  $('#action-button').data("action");
+                    var word = current_word ? current_word['word'] : null;
+                    var title;
+                    if(word || action === "restart"){
+                        title = word;
+                    } else if (action === "start"){
+                        title = "Welcome";
+                    } else if (action === "end"){
+                        title = "Grattis!";
+                    } else {
+                        console.log(action);
+                        title = "ERROR";
+                    }
+
+                    History.pushState({
+                            current_word: current_word,
+                            word_data: word_data,
+                            page_type: action,
+                            is_blue: is_blue
+                        },
+                        "Take Over The Word - " + (word? word : title),
+                        "?"+title
+                    );
+                }
+
+                function loadState(state_data) {
+                    console.log("Load state");
+                    current_word = state_data['current_word'];
+                    word_data = state_data['word_data']
+                    action = state_data['page_type'];
+                    is_blue = state_data['is_blue'];
+
+                    if(action ==="start") {
+                        $('.description span').addClass('not-intro');
+                        $('.peace-hand img').attr('src', 'img/hands/thumb-hand.svg');
+                        $('.peace-hand').hide(0);
+
+                        // display audio button first time
+                        $('#audio-button').show()
+
+                        showAudioButton();
+                        displayNewWord();
+
+                    } else if(action ==="translate") {
+                        switchColors();
+                        $('.social-buttons').show(0);
+
+                        hideAudioButton();
+                        displayTranslation();
+
+                    } else if(action ==="next") {
+                        switchColors();
+                        $('.social-buttons').hide(0);
+                        showAudioButton();
+                        displayNewWord();
+                    } else if (action === "end") {
+                        switchColors();
+                        $('.social-buttons').hide(0);
+                        showAudioButton();
+                        displayFinalPage();
+                    } else if(action === "restart") {
+                        restart();
+                    }
+                }
             });
 
         </script>
