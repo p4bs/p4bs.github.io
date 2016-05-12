@@ -244,6 +244,9 @@ body.yellow {
         width: 90px;
     }
 
+    .main .header .swedish-word {
+        font-size: 69px;
+    }
 }
 
 @media (max-width: 450px)
