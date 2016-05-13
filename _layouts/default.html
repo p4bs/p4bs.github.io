@@ -595,12 +595,12 @@
                     var action =  $('#action-button').data("action");
                     var word = current_word ? current_word['word'] : null;
                     var title;
-                    if(word || action === "restart"){
+                    if(action == "next" || action =="translate" || action === "restart"){
                         title = word;
                     } else if (action === "start"){
                         title = "Welcome";
                     } else if (action === "end"){
-                        title = "Grattis!";
+                        title = "Grattis";
                     } else {
                         console.log(action);
                         title = "ERROR";
@@ -611,7 +611,7 @@
                             word_data: word_data,
                             page_type: action
                         },
-                        "Take Over The Word - " + (word? word : title),
+                        "Take Over The Word - " + title,
                         "?"+title
                     );
                 }
