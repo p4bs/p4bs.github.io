@@ -581,13 +581,12 @@
                     var audio = new Audio('audio/'+current_word['audio-file']);
                     audio.play();
                 })
-                var i = 0;
+
                 // Let's do history
                 var History = window.History;
                 History.Adapter.bind(window,'statechange',function(){
                     var State = History.getState();
                     // History.log(State.data, State.title, State.url);
-                    // If back button loadHistory()
                     loadState(State.data)
                 });
 
@@ -617,11 +616,9 @@
                 }
 
                 function loadState(state_data) {
-                    console.log("Load state");
                     current_word = state_data['current_word'];
                     word_data = state_data['word_data']
                     action = state_data['page_type'];
-
                     if(action ==="start") {
                         setBlue();
                         $('.description span').addClass('not-intro');
