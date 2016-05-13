@@ -511,7 +511,7 @@
 
                 $('#action-button').click(function() {
                     var action = $('#action-button').data("action");
-                    if(action !== "translate") {
+                    if(action !== "translate" && action !== "end") {
                         current_word = getNextWord();
                         stateChange();
                     } else  {
@@ -529,8 +529,6 @@
 
                 function restart() {
                     $('.description span').removeClass('.not-intro');
-                    word_data = JSON.parse(document.getElementById('words').innerHTML);
-                    current_word = getNextWord();
                     $('#email-button').hide(0);
                     $('.social-buttons').hide(0);
                     $('.peace-hand').hide(0);
@@ -553,6 +551,9 @@
                     if(window.innerWidth>840){
                         $('.peace-hand').show(0);
                     }
+
+                    // set up for next round
+                    word_data = JSON.parse(document.getElementById('words').innerHTML);
                 }
 
                 // Social buttons
