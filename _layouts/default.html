@@ -473,6 +473,8 @@
                     // Translate when clicked
                     $('#action-button').data("action", "translate");
 
+                    // Play sound
+                    play_sound();
                 }
 
                 function showAudioButton() {
@@ -592,9 +594,13 @@
                     window.open("https://www.linkedin.com/shareArticle?mini=true&url="+get_share_url()+"&title="+get_share_word()+"&source="+get_share_url()+"&summary=Take Over The Word", "linkedin-popup", 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+y+', left='+x)
                 });
 
-                $('#audio-button').click(function() {
+                function play_sound(){
                     var audio = new Audio('audio/'+current_word['audio-file']);
                     audio.play();
+                }
+
+                $('#audio-button').click(function() {
+                    play_sound();
                 })
 
                 // Let's do history
