@@ -233,6 +233,22 @@ body.yellow {
     margin-left: -10px;
 }
 
+.footer {
+    height: 3em;
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    width: 100%;
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 12px;
+    font-family: Gotham-Book, Sans-Serif;
+}
+
+.footer a {
+    color: inherit;
+}
 /* Tablets and phablets */
 @media (max-width: 840px) {
 
@@ -341,6 +357,10 @@ body.yellow {
 
     .button {
         width: 100px;
+    }
+
+    .footer {
+        font-size: 9px;
     }
 }
 
