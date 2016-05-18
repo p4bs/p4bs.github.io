@@ -401,6 +401,7 @@
             <div class="social-buttons">
                 <i class="fa fa-twitter" id="twitter-share" aria-hidden="true"></i>
                 <i class="fa fa-facebook" id="facebook-share" aria-hidden="true"></i>
+                <i class="fa fa-linkedin" id="linkedin-share" aria-hidden="true"></i>
             </div>
 
             <div class="peace-hand hand">
@@ -563,6 +564,19 @@
                     return "takeovertheword.com/word_pages/"+current_word['share-url'];
                 }
 
+                function get_share_word() {
+                    if(!current_word)
+                        return "Take Over the Word";
+                    return current_word['word']+"!";
+                }
+
+                $('#twitter-share').click(function() {
+                    var h = 500;
+                    var w = 700;
+                    var y = window.top.outerHeight / 2 + window.top.screenY - ( h / 2)
+                    var x = window.top.outerWidth / 2 + window.top.screenX - ( w / 2)
+                    window.open("https://twitter.com/intent/tweet?text=Time%20to%20learn%20Swedish!&url=http%3A%2F%2Ftakeovertheword.com", "twitter-popup", 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+y+', left='+x)
+                });
                 $('#facebook-share').click(function() {
                     var h = 500;
                     var w = 700;
@@ -570,12 +584,12 @@
                     var x = window.top.outerWidth / 2 + window.top.screenX - ( w / 2)
                     window.open("https://www.facebook.com/dialog/share?  app_id=145634995501895&display=popup&href="+get_share_url()+"&display=page", "fb-popup", 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+y+', left='+x)
                 });
-                $('#twitter-share').click(function() {
+                $('#linkedin-share').click(function() {
                     var h = 500;
                     var w = 700;
                     var y = window.top.outerHeight / 2 + window.top.screenY - ( h / 2)
                     var x = window.top.outerWidth / 2 + window.top.screenX - ( w / 2)
-                    window.open("https://twitter.com/intent/tweet?text=Time%20to%20learn%20Swedish!&url=http%3A%2F%2Ftakeovertheword.com", "twitter-popup", 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+y+', left='+x)
+                    window.open("https://www.linkedin.com/shareArticle?mini=true&url="+get_share_url()+"&title="+get_share_word()+"&source="+get_share_url()+"&summary=Take Over The Word", "linkedin-popup", 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+y+', left='+x)
                 });
 
                 $('#audio-button').click(function() {
