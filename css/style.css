@@ -140,7 +140,7 @@ body.yellow {
 }
 
 .main {
-    margin: 3% auto 0;
+    margin: 5% auto 0;
     width: 800px;
     text-align: center;
     padding-bottom: 3em;
@@ -308,7 +308,7 @@ body.yellow {
 
     .main {
         max-width: 80%;
-        margin-top: 35%;
+        margin-top: 45%;
     }
 
     .main .description {
@@ -378,7 +378,7 @@ body.yellow {
     }
 
     .main {
-        margin-top: 35%;
+        margin-top: 45%;
     }
 
 }
