@@ -83,7 +83,7 @@ body.yellow {
 
 .info-box #info-box-container {
     position: relative;
-    top: 8%;
+    top: 18%;
     z-index: 20;
 }
 
@@ -100,7 +100,7 @@ body.yellow {
 
 .info-box .text {
     width: 560px;
-    margin: 0 auto;
+    margin: 15px auto 0;
     font-family: Gotham-Book;
 }
 
@@ -261,6 +261,7 @@ body.yellow {
 
     .main {
         max-width: 650px;
+        margin-top: 15%;
     }
     .main .header .swedish-word {
         font-size: 69px;
