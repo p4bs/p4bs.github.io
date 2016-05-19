@@ -415,6 +415,11 @@
         </div>
         <script>
             $( document ).ready(function(){
+                // Hide footer on page load
+                $('.footer').hide(0);
+
+                // -----
+
                 var info_showing = false;
                 var word_data = JSON.parse(document.getElementById('words').innerHTML);
                 var current_word = null;
@@ -652,6 +657,9 @@
 
                         // display audio button first time
                         $('#audio-button').show()
+
+                        // Show footer again
+                        $('.footer').show(0);
 
                         showAudioButton();
                         displayNewWord();
