@@ -270,6 +270,10 @@ body.yellow {
     .main .header .subtext {
         font-size: 35px;
     }
+
+    .main .description {
+        height: 250px;
+    }
 }
 
 @media (max-width: 450px)
