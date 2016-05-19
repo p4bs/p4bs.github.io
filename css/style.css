@@ -143,7 +143,6 @@ body.yellow {
     margin: 5% auto 0;
     width: 800px;
     text-align: center;
-    padding-bottom: 3em;
 }
 
 .main .header {
@@ -218,7 +217,7 @@ body.yellow {
 }
 
 .main .social-buttons {
-    display: none;
+    visibility: hidden;
     font-size: 30px;
     margin: 0px auto;
     color: white;
@@ -236,7 +235,7 @@ body.yellow {
 
 .footer {
     height: 3em;
-    margin: 0 auto;
+    margin: 1em auto 0;
     width: 100%;
     color: white;
     text-align: center;

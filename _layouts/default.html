@@ -487,6 +487,8 @@
                 }
 
                 function showAudioButton() {
+                    // If it is in responsive mode it is lying underneath the header and we can
+                    // just remove the element.
                     if( $(window).width()<500 ){
                         $('#audio-button').css('display', 'block');
                     }
@@ -542,7 +544,7 @@
                 function restart() {
                     $('.description span').removeClass('.not-intro');
                     $('#email-button').hide(0);
-                    $('.social-buttons').hide(0);
+                    $('.social-buttons').css('visibility', 'hidden');
                     $('.peace-hand').hide(0);
 
                     showAudioButton();
@@ -662,26 +664,26 @@
                         $('.footer').show(0);
 
                         // Hide for when going back with history
-                        $('.social-buttons').hide(0);
+                        $('.social-buttons').css('visibility', 'hidden');
 
                         showAudioButton();
                         displayNewWord();
 
                     } else if(action ==="translate") {
                         setYellow();
-                        $('.social-buttons').show(0);
+                        $('.social-buttons').css('visibility', 'visible');
 
                         hideAudioButton();
                         displayTranslation();
 
                     } else if(action ==="next") {
                         setBlue();
-                        $('.social-buttons').hide(0);
+                        $('.social-buttons').css('visibility', 'hidden');
                         showAudioButton();
                         displayNewWord();
                     } else if (action === "end") {
                         setBlue();
-                        $('.social-buttons').hide(0);
+                        $('.social-buttons').css('visibility', 'hidden');
                         showAudioButton();
                         displayFinalPage();
                     } else if(action === "restart") {
