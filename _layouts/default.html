@@ -623,10 +623,8 @@
                     var action =  $('#action-button').data("action");
                     var word = current_word ? current_word['word'] : null;
                     var title;
-                    if(action == "next" || action =="translate" || action === "restart"){
+                    if(action == "next" || action =="translate" || action === "restart" || action =="start"){
                         title = word;
-                    } else if (action === "start"){
-                        title = "Welcome";
                     } else if (action === "end"){
                         title = "Grattis";
                     } else {
@@ -639,8 +637,7 @@
                             word_data: word_data,
                             page_type: action
                         },
-                        "Take Over The Word - " + title,
-                        "?"+title
+                        "Take Over The Word - " + title
                     );
                 }
 
@@ -648,7 +645,25 @@
                     current_word = state_data['current_word'];
                     word_data = state_data['word_data']
                     action = state_data['page_type'];
-                    if(action ==="start") {
+                    if(action === "initial") {
+                        $('.swedish-word span').html('<img id="logotype" src="img/logotype.svg">');
+                        setBlue();
+                        $('.description span').html("Here’s the thing: we at Business Sweden help Swedish startups expand their business abroad. Which is great, because the world needs more swedishness. So we figured, since we’re bringing our Swedish startups to you, we want to help you prepare – by teaching you some Swedish. So you can start to vabba, orka, take påtår, dygna, tappa sugen, be fulsnygga and get dåndimpen. Just like the Swedes.\
+                          <br><br>\
+                          Great swedishness is coming your way.\
+                          <br>\
+                          This dictionary will help you prepare.");
+
+                        hideAudioButton();
+                        $('.header .subtext span').text('');
+                        $('.description span').removeClass('not-intro');
+                        $('#action-button span').text("Start!");
+                        $('#action-button').data("action", "start");
+                        $('.social-buttons').css('visibility', 'hidden');
+                        $('.peace-hand').show(0);
+                        $('.footer').hide(0);
+
+                    } else if(action ==="start") {
                         setBlue();
                         $('.description span').addClass('not-intro');
                         $('.peace-hand img').attr('src', 'img/hands/thumb-hand.svg');
@@ -688,8 +703,16 @@
                         restart();
                     }
                 }
-            });
 
+                History.replaceState(
+                  {
+                      current_word: "none",
+                      word_data: word_data,
+                      page_type: "initial"
+                  },
+                  "Take Over The Word"
+                );
+            });
         </script>
     </body>
     <!-- Developed by Pärham FH - parham@fazelzadeh.se -->
